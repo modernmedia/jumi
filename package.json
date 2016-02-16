@@ -1,14 +1,21 @@
 {
-  "name": "Jumi",
+  "name": "jumi",
   "version": "1.0.0",
   "description": "Converts a JSON object to a HTML string",
   "main": "jumi.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
-  "keywords": [],
+  "keywords": ["json", "html"],
   "author": "Modern Media Inc",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/modernmedia/jumi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/modernmedia/jumi"
+  },
   "devDependencies": {
     "mocha": "^2.4.5"
   }
