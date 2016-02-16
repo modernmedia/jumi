@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/modernmedia/jumi.svg?branch=master)](https://travis-ci.org/modernmedia/jumi)
+
 Jumi is a simple JSON object to HTML string converter. It has a simple job of taking in JSON objects and putting out HTML strings.
 
 Jumi does not do any special things, he is a rather simple erect bipedal primate mammal. He does not validate the JSON passed in (except to make sure it contains tag values), he also does not validate the HTML coming out.
