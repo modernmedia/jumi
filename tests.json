@@ -1,0 +1,146 @@
+[
+  {
+    "name": "should generate html",
+    "json": [
+      {
+        "tag": "div",
+        "id": "test",
+        "contents": "Hello World!"
+      }
+    ],
+    "html": "<div id='test'>Hello World!</div>",
+    "type": "equal"
+  },
+  {
+    "name": "should throw an error generating html",
+    "json": [
+      {
+        "id": "test",
+        "contents": "Hello World!"
+      }
+    ],
+    "html": "<div id='test'>Hello World!</div>",
+    "type": "fail"
+},
+{
+  "name": "should generate children html",
+  "json": [
+    {
+      "tag": "div",
+      "id": "test",
+      "children": [{
+          "tag": "span",
+          "contents": "Hello World!"
+      }]
+    }
+  ],
+  "html": "<div id='test'><span>Hello World!</span></div>",
+  "type": "equal"
+},
+{
+  "name": "should generate multiple children html",
+  "json": [
+    {
+      "tag": "div",
+      "id": "test",
+      "children": [{
+          "tag": "span",
+          "contents": "Hello World!"
+      },
+      {
+          "tag": "p",
+          "contents": "Hello World 2!"
+      },
+      {
+          "tag": "div",
+          "class": "test",
+          "contents": "Hello World 3!"
+      }]
+    }
+  ],
+  "html": "<div id='test'><span>Hello World!</span><p>Hello World 2!</p><div class='test'>Hello World 3!</div></div>",
+  "type": "equal"
+},
+{
+  "name": "should generate multiple attributes",
+  "json": [
+    {
+      "tag": "div",
+      "id": "test",
+      "class": "hello"
+    }
+  ],
+  "html": "<div id='test' class='hello'></div>",
+  "type": "equal"
+},
+{
+  "name": "should generate html with unicode content",
+  "json": [
+    {
+      "tag": "div",
+      "id": "test",
+      "class": "hello",
+      "contents": "Testing «ταБЬℓσ»: 1<2 & 4+1>3, now 20% off!"
+    }
+  ],
+  "html": "<div id='test' class='hello'>Testing «ταБЬℓσ»: 1<2 & 4+1>3, now 20% off!</div>",
+  "type": "equal"
+},
+{
+  "name": "should generate html with greek unicode content",
+  "json": [
+    {
+      "tag": "div",
+      "id": "test",
+      "class": "hello",
+      "contents": "Γαζέες καὶ μυρτιὲς δὲν θὰ βρῶ πιὰ στὸ χρυσαφὶ ξέφωτο"
+    }
+  ],
+  "html": "<div id='test' class='hello'>Γαζέες καὶ μυρτιὲς δὲν θὰ βρῶ πιὰ στὸ χρυσαφὶ ξέφωτο</div>",
+  "type": "equal"
+},
+{
+  "name": "should generate html with complex object",
+  "json": [
+    {
+      "tag": "div",
+      "id": "test",
+      "class": "hello",
+      "children": [
+        {
+          "tag": "fieldset",
+          "class": "fieldset",
+          "children": [
+            {
+              "tag": "label",
+              "contents": "First Name",
+              "children": [
+                {
+                  "tag": "input",
+                  "name": "first_name",
+                  "value": "First Name",
+                  "id": "first_name"
+                }
+              ]
+            },
+            {
+              "tag": "label",
+              "contents": "Last Name",
+              "children": [
+                {
+                  "tag": "input",
+                  "name": "last_name",
+                  "value": "Last Name",
+                  "id": "last_name"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "html": "<div id='test' class='hello'><fieldset class='fieldset'><label>First Name<input name='first_name' value='First Name' id='first_name'></label><label>Last Name<input name='last_name' value='Last Name' id='last_name'></label></fieldset></div>",
+  "type": "equal"
+}
+]

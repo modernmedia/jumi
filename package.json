@@ -1,0 +1,15 @@
+{
+  "name": "Jumi",
+  "version": "1.0.0",
+  "description": "Converts a JSON object to a HTML string",
+  "main": "jumi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Modern Media Inc",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
